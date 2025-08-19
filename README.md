@@ -1,5 +1,10 @@
-# Vue 3 + TypeScript + Vite
+# ParkApp
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## How to start
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+- Install node (v22.14.0)
+- Install yarn
+- Get repository
+- Open the project directory
+- Install dependencies `yarn install`
+- Start developer mode `yarn dev`
