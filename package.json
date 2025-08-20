@@ -10,13 +10,15 @@
     "format": "prettier --write .",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "fetch-locales": "node server/fetchLocales"
+    "fetch-locales": "node src/server/fetchLocales"
   },
   "dependencies": {
     "@apollo/client": "^3.13.9",
     "@formkit/vue": "^1.6.9",
     "@tailwindcss/vite": "^4.1.12",
     "@vue/apollo-composable": "^4.2.2",
+    "@vueuse/core": "^13.7.0",
+    "@vueuse/integrations": "^13.7.0",
     "dotenv": "^17.2.1",
     "graphql": "^16.11.0",
     "graphql-tag": "^2.12.6",

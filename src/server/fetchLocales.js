@@ -1,14 +1,13 @@
 import { writeFile } from 'fs/promises';
 import path from 'path';
 import dotenv from 'dotenv';
+import appConfig from '~~/app.config';
 dotenv.config();
-
-const locales = ['en', 'pl'];
 
 (async () => {
   try {
     const responses = await Promise.all(
-      locales.map((locale) => {
+      Object.values(appConfig.availableLocales).map((locale) => {
         // eslint-disable-next-line no-undef
         const url = `https://localise.biz/api/export/locale/${locale}.json?key=${process.env.VITE_LOCO_TOKEN}`;
         return fetch(url);
