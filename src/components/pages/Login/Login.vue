@@ -17,15 +17,23 @@
 
   const { mutate: loginUser } = useMutation(LOGIN_USER);
 
+  const cleanForm = () => {
+    email.value = '';
+    password.value = '';
+    errors.value = [];
+  };
+
   const loginUserHandler = async () => {
     try {
       // workaround because the provided data does not work with the API
-      if (email.value === 'tester@parkapp.pl' && password.value === '123$TesT$321') {
+      if (
+        email.value.trim() === import.meta.env.VITE_LOGIN_MOCK &&
+        password.value.trim() === import.meta.env.VITE_PASSWORD_MOCK
+      ) {
         sessionStorage.setItem(appConfig.authSessionKey, crypto.randomUUID());
         const locale = route.params.locale || appConfig.availableLocales.pl;
         router.push({ name: 'Home', params: { locale } });
-        email.value = '';
-        password.value = '';
+        cleanForm();
         return;
       }
 

@@ -7,6 +7,6 @@
 - Get repository
 - Open the project directory
 - Install dependencies `yarn install`
-- Contact the author to obtain the .env file. The .env file is required to download the translations.
+- Contact the author to obtain the .env file. The .env file is required.
 - Fetch translations `yarn fetch-locales`
 - Start developer mode `yarn dev`
