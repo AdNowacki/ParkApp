@@ -7,6 +7,7 @@ const routes = [
     children: [
       {
         path: '',
+        name: 'Home',
         component: Home,
         meta: {
           titleKey: 'page.home.title',
@@ -15,6 +16,7 @@ const routes = [
       },
       {
         path: 'login',
+        name: 'Login',
         component: Login,
         meta: {
           titleKey: 'page.login.title',
@@ -35,8 +37,15 @@ const router = createRouter({
 });
 
 router.beforeEach((to, _, next) => {
-  if (to.meta.authRequired && !isAuthenticated()) {
-    next({ name: 'Login' });
+  const locale = to.params.locale || 'pl';
+  const isAuthenticated = sessionStorage.getItem('token');
+
+  if (to.name === 'Login' && isAuthenticated) {
+    next({ name: 'Home', params: { locale } });
+  }
+
+  if (to.meta.authRequired && !isAuthenticated) {
+    next({ name: 'Login', params: { locale } });
   } else {
     next();
   }

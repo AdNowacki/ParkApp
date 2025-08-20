@@ -1,11 +1,14 @@
 <script setup lang="ts">
   import { ref } from 'vue';
   import { useI18n } from 'vue-i18n';
+  import { useRouter, useRoute } from 'vue-router';
   import { LOGIN_USER } from '!/mutations';
   import { useMutation } from '@vue/apollo-composable';
   import { ApolloError } from '@apollo/client';
 
   const { t } = useI18n();
+  const router = useRouter();
+  const route = useRoute();
 
   const email = ref<string>('');
   const password = ref<string>('');
@@ -17,20 +20,20 @@
     try {
       // workaround because the provided data does not work with the API
       if (email.value === 'tester@parkapp.pl' && password.value === '123$TesT$321') {
-        crypto.randomUUID();
+        sessionStorage.setItem('token', crypto.randomUUID());
+        const locale = route.params.locale || 'pl';
+        router.push({ name: 'Home', params: { locale } });
         email.value = '';
         password.value = '';
         return;
       }
+
       await loginUser({
         email: email.value,
         password: password.value,
       });
-
-      console.log('Success');
     } catch (error) {
       const msg = (error as ApolloError | Error)?.message ?? 'Unknown error';
-      console.error(t(msg));
       errors.value.push(t(msg));
     }
   };
@@ -72,5 +75,3 @@
     </FormKit>
   </div>
 </template>
-
-<style lang="scss" scoped></style>
