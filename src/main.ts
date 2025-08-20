@@ -1,5 +1,7 @@
 import { createApp, h, provide } from 'vue';
 import { DefaultApolloClient } from '@vue/apollo-composable';
+import { plugin, defaultConfig } from '@formkit/vue';
+
 import { apolloClient } from './apollo';
 import router from './router';
 
@@ -13,5 +15,6 @@ const app = createApp({
   render: () => h(App),
 });
 
+app.use(plugin, defaultConfig);
 app.use(router);
 app.mount('#app');
