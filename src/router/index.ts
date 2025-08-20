@@ -10,6 +10,7 @@ const routes = [
         component: Home,
         meta: {
           titleKey: 'page.home.title',
+          authRequired: true,
         },
       },
       {
@@ -17,6 +18,7 @@ const routes = [
         component: Login,
         meta: {
           titleKey: 'page.login.title',
+          authRequired: false,
         },
       },
     ],
@@ -30,6 +32,14 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+router.beforeEach((to, _, next) => {
+  if (to.meta.authRequired && !isAuthenticated()) {
+    next({ name: 'Login' });
+  } else {
+    next();
+  }
 });
 
 export default router;
