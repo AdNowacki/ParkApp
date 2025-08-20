@@ -2,8 +2,29 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { Home, Login } from '@/pages';
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/login', component: Login },
+  {
+    path: '/:locale(pl|en)',
+    children: [
+      {
+        path: '',
+        component: Home,
+        meta: {
+          titleKey: 'page.home.title',
+        },
+      },
+      {
+        path: 'login',
+        component: Login,
+        meta: {
+          titleKey: 'page.login.title',
+        },
+      },
+    ],
+  },
+  {
+    path: '/',
+    redirect: '/pl',
+  },
 ];
 
 const router = createRouter({

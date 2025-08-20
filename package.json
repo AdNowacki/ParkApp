@@ -9,17 +9,20 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "fetch-locales": "node server/fetchLocales"
   },
   "dependencies": {
     "@apollo/client": "^3.13.9",
     "@formkit/vue": "^1.6.9",
     "@tailwindcss/vite": "^4.1.12",
     "@vue/apollo-composable": "^4.2.2",
+    "dotenv": "^17.2.1",
     "graphql": "^16.11.0",
     "graphql-tag": "^2.12.6",
     "tailwindcss": "^4.1.12",
     "vue": "^3.5.18",
+    "vue-i18n": "11",
     "vue-router": "4"
   },
   "devDependencies": {

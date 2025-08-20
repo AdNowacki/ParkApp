@@ -1,7 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { useI18n } from 'vue-i18n';
+  const { t } = useI18n();
+</script>
 
 <template>
-  <h1>Home Page</h1>
+  <h1>{{ t('app_name') }}</h1>
 </template>
 
 <style lang="scss" scoped></style>
