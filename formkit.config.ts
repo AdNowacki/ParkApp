@@ -1,10 +1,11 @@
 import { defaultConfig } from '@formkit/vue';
-import { rootClasses } from './formkit.theme';
 import { pl } from '@formkit/i18n';
+import { rootClasses } from '~~/formkit.theme';
+import appConfig from '~~/app.config';
 
 export default defaultConfig({
   locales: { pl },
-  locale: 'pl',
+  locale: appConfig.defaultLocale,
   config: {
     rootClasses,
   },

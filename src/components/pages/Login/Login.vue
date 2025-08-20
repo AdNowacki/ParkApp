@@ -5,6 +5,7 @@
   import { LOGIN_USER } from '!/mutations';
   import { useMutation } from '@vue/apollo-composable';
   import { ApolloError } from '@apollo/client';
+  import appConfig from '~~/app.config';
 
   const { t } = useI18n();
   const router = useRouter();
@@ -20,8 +21,8 @@
     try {
       // workaround because the provided data does not work with the API
       if (email.value === 'tester@parkapp.pl' && password.value === '123$TesT$321') {
-        sessionStorage.setItem('token', crypto.randomUUID());
-        const locale = route.params.locale || 'pl';
+        sessionStorage.setItem(appConfig.authSessionKey, crypto.randomUUID());
+        const locale = route.params.locale || appConfig.availableLocales.pl;
         router.push({ name: 'Home', params: { locale } });
         email.value = '';
         password.value = '';

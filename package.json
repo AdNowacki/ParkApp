@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "fetch-locales": "node server/fetchLocales"
+    "fetch-locales": "node src/server/fetchLocales"
   },
   "dependencies": {
     "@apollo/client": "^3.13.9",

@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import { Home, Login } from '@/pages';
+import appConfig from '~~/app.config';
 
 const routes = [
   {
@@ -37,8 +38,8 @@ const router = createRouter({
 });
 
 router.beforeEach((to, _, next) => {
-  const locale = to.params.locale || 'pl';
-  const isAuthenticated = sessionStorage.getItem('token');
+  const locale = to.params.locale || appConfig.availableLocales.pl;
+  const isAuthenticated = sessionStorage.getItem(appConfig.authSessionKey);
 
   if (to.name === 'Login' && isAuthenticated) {
     next({ name: 'Home', params: { locale } });

@@ -2,9 +2,10 @@ import { createApp, h, provide } from 'vue';
 import { createI18n } from 'vue-i18n';
 import { DefaultApolloClient } from '@vue/apollo-composable';
 import { plugin, defaultConfig } from '@formkit/vue';
-import formkitConfig from '../formkit.config.ts';
-import { apolloClient } from './apollo';
-import router from './router';
+import { apolloClient } from '~/apollo';
+import router from '~/router';
+import formkitConfig from '~~/formkit.config.ts';
+import appConfig from '~~/app.config';
 
 import './style.css';
 import App from './App.vue';
@@ -21,8 +22,8 @@ const app = createApp({
 
 const i18n = createI18n({
   legacy: false,
-  locale: 'pl',
-  fallbackLocale: 'en',
+  locale: appConfig.defaultLocale,
+  fallbackLocale: appConfig.availableLocales.en,
   messages: {
     pl,
     en,
@@ -35,8 +36,8 @@ app.use(i18n);
 app.mount('#app');
 
 router.beforeResolve((to, _, next) => {
-  const locale = to.params.locale;
-  if (typeof locale === 'string' && ['en', 'pl'].includes(locale)) {
+  const locale = to.params.locale as string | undefined;
+  if (locale && Object.values(appConfig.availableLocales).includes(locale)) {
     i18n.global.locale.value = locale as 'pl' | 'en';
   }
   next();
