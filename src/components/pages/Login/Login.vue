@@ -24,6 +24,25 @@
 </script>
 
 <template>
+  <FormKit type="form" submit-label="Zaloguj się" @submit="loginUserHandler" :actions="true" :errors="formErrors">
+    <FormKit
+      v-model="email"
+      type="email"
+      name="email"
+      label="Adres e-mail"
+      validation="required|email"
+      placeholder="Wpisz swój e-mail"
+    />
+
+    <FormKit
+      v-model="password"
+      type="password"
+      name="password"
+      label="Hasło"
+      validation="required|min:3"
+      placeholder="Wpisz swoje hasło"
+    />
+  </FormKit>
   <h1 @click="loginUserHandler">Login Page</h1>
 </template>
 
