@@ -5,7 +5,7 @@
   import { LOGIN_USER } from '!/mutations';
   import { useMutation } from '@vue/apollo-composable';
   import { ApolloError } from '@apollo/client';
-  import appConfig from '~~/app.config';
+  import appConfig from '~~/app.config.js';
   import { useErrorStore } from '~/stores/errorStore';
 
   const { t } = useI18n();
