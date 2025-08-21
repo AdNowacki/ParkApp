@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "test:unit": "vitest run",
-    "coverage": "vitest run --coverage",
+    "test:coverage": "vitest run --coverage",
     "fetch-locales": "node src/server/fetchLocales"
   },
   "dependencies": {

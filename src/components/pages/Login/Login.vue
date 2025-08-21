@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { ref } from 'vue';
   import { useI18n } from 'vue-i18n';
   import { useRouter, useRoute } from 'vue-router';
   import { LOGIN_USER } from '!/mutations';
@@ -7,21 +6,14 @@
   import { ApolloError } from '@apollo/client';
   import appConfig from '~~/app.config.js';
   import { useErrorStore } from '~/stores/errorStore';
+  import { useLoginForm } from '~/composables';
 
   const { t } = useI18n();
   const router = useRouter();
   const route = useRoute();
   const errorStore = useErrorStore();
-
-  const email = ref<string>('');
-  const password = ref<string>('');
-
+  const { email, password, cleanForm } = useLoginForm();
   const { mutate: loginUser } = useMutation(LOGIN_USER);
-
-  const cleanForm = () => {
-    email.value = '';
-    password.value = '';
-  };
 
   const loginUserHandler = async () => {
     errorStore.clearAll();
