@@ -1,7 +1,7 @@
-import { writeFile } from 'fs/promises';
+import { writeFile, mkdir } from 'fs/promises';
 import path from 'path';
 import dotenv from 'dotenv';
-import appConfig from '~~/app.config';
+import appConfig from '../../app.config.js';
 dotenv.config();
 
 (async () => {
@@ -13,6 +13,14 @@ dotenv.config();
         return fetch(url);
       })
     );
+
+    const localesDir = path.resolve('locales');
+
+    try {
+      await mkdir(localesDir, { recursive: true });
+    } catch (err) {
+      console.error('Nie udało się utworzyć folderu locales:', err);
+    }
 
     for (const response of responses) {
       const locale = response.url.split('.')[1].split('/').pop();
