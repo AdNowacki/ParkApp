@@ -15,5 +15,19 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     globals: true,
+    coverage: {
+      exclude: [
+        'vite.config.ts',
+        'eslint.config.ts',
+        'vitest.config.ts',
+        'tailwind.config.js',
+        'formkit.config.ts',
+        'formkit.theme.ts',
+        'app.config.js',
+        'node_modules/**',
+        'coverage/**',
+        '**/*.d.ts',
+      ],
+    },
   },
 });
