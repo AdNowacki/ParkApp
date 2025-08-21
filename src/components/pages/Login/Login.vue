@@ -24,6 +24,7 @@
   };
 
   const loginUserHandler = async () => {
+    errorStore.clearAll();
     try {
       // workaround because the provided data does not work with the API
       if (
