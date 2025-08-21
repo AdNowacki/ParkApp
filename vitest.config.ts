@@ -26,6 +26,7 @@ export default defineConfig({
         'app.config.js',
         'node_modules/**',
         'coverage/**',
+        'dist/**',
         '**/*.d.ts',
       ],
     },
