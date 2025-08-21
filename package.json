@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "yarn test:unit",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "test": "vitest",
+    "test:unit": "vitest run",
     "coverage": "vitest run --coverage",
     "fetch-locales": "node src/server/fetchLocales"
   },
