@@ -1,5 +1,6 @@
 import { createApp, h, provide } from 'vue';
 import { createI18n } from 'vue-i18n';
+import { createPinia } from 'pinia';
 import { DefaultApolloClient } from '@vue/apollo-composable';
 import { plugin, defaultConfig } from '@formkit/vue';
 import { apolloClient } from '~/apollo';
@@ -13,6 +14,7 @@ import App from './App.vue';
 import en from '../locales/en.json';
 import pl from '../locales/pl.json';
 
+const pinia = createPinia();
 const app = createApp({
   setup() {
     provide(DefaultApolloClient, apolloClient);
@@ -33,6 +35,7 @@ const i18n = createI18n({
 app.use(plugin, defaultConfig(formkitConfig));
 app.use(router);
 app.use(i18n);
+app.use(pinia);
 app.mount('#app');
 
 router.beforeResolve((to, _, next) => {

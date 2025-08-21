@@ -6,21 +6,21 @@
   import { useMutation } from '@vue/apollo-composable';
   import { ApolloError } from '@apollo/client';
   import appConfig from '~~/app.config';
+  import { useErrorStore } from '~/stores/errorStore';
 
   const { t } = useI18n();
   const router = useRouter();
   const route = useRoute();
+  const errorStore = useErrorStore();
 
   const email = ref<string>('');
   const password = ref<string>('');
-  const errors = ref<string[]>([]);
 
   const { mutate: loginUser } = useMutation(LOGIN_USER);
 
   const cleanForm = () => {
     email.value = '';
     password.value = '';
-    errors.value = [];
   };
 
   const loginUserHandler = async () => {
@@ -43,7 +43,10 @@
       });
     } catch (error) {
       const msg = (error as ApolloError | Error)?.message ?? 'Unknown error';
-      errors.value.push(t(msg));
+      errorStore.addItem({
+        id: crypto.randomUUID(),
+        message: t(msg),
+      });
     }
   };
 </script>
@@ -51,7 +54,7 @@
 <template>
   <div class="bg-white shadow-lg rounded-lg p-6 border border-gray-200 max-w-lg mx-auto mt-10">
     <h2 class="text-2xl font-semibold mb-3 text-gray-800">{{ t('form.sign_in') }}</h2>
-    <FormKit type="form" @submit="loginUserHandler" :actions="true" :errors="errors">
+    <FormKit type="form" @submit="loginUserHandler" :actions="true">
       <template #submit>
         <button
           type="submit"
