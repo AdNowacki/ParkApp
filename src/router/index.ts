@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { Home, Login } from '@/pages';
+import Home from '@/pages/Home/Home.vue';
+import Login from '@/pages/Login/Login.vue';
+import NotFound from '@/common/NotFound/NotFound.vue';
 import appConfig from '~~/app.config';
 
 const routes = [
@@ -30,6 +32,7 @@ const routes = [
     path: '/',
     redirect: '/pl',
   },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ];
 
 const router = createRouter({

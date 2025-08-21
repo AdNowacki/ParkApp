@@ -6,7 +6,7 @@ import { plugin, defaultConfig } from '@formkit/vue';
 import { apolloClient } from '~/apollo';
 import router from '~/router';
 import formkitConfig from '~~/formkit.config.ts';
-import appConfig from '~~/app.config';
+import appConfig from '../app.config';
 
 import './style.css';
 import App from './App.vue';

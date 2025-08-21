@@ -1,7 +1,7 @@
 import { writeFile } from 'fs/promises';
 import path from 'path';
 import dotenv from 'dotenv';
-import appConfig from '~~/app.config';
+import appConfig from '../../app.config.js';
 dotenv.config();
 
 (async () => {
