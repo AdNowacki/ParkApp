@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import GlobalError from '~/components/common/GlobalError/GlobalError.vue';
+  import GlobalError from '~/components/common/GlobalError.vue';
 </script>
 
 <template>
