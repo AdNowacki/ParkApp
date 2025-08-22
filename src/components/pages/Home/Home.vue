@@ -1,10 +1,7 @@
 <script setup lang="ts">
-  import { useI18n } from 'vue-i18n';
-  const { t } = useI18n();
+  import PageHeader from '@/layouts/PageHeader.vue';
 </script>
 
 <template>
-  <h1>{{ t('app_name') }}</h1>
+  <PageHeader />
 </template>
-
-<style lang="scss" scoped></style>
