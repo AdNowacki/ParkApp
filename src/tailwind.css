@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+@source "../index.html" "./App.vue" "./**/*.{vue,html,js,ts,jsx,tsx}" "../formkit.theme.ts";
+
+/* https://tailwindcss.com/docs/theme */
+@theme {
+  --color-primary-100: #ffffff;
+  --color-primary-200: #f2f2f2;
+  --color-primary-300: #d9d9d9;
+  --color-primary-400: #bfbfbf;
+  --color-primary-500: #999999;
+  --color-primary-600: #666666;
+  --color-primary-700: #4d4d4d;
+  --color-primary-800: #333333;
+
+  --color-decor-100: #fadf99;
+  --color-decor-200: #fcd572;
+  --color-decor-300: #fdc94f;
+  --color-decor-400: #feb53a;
+  --color-decor-500: #ffb034;
+  --color-decor-600: #db8e2c;
+  --color-decor-700: #b46f24;
+  --color-decor-800: #8c541c;
+}
