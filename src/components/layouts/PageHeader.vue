@@ -1,13 +1,14 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n';
   import PageContainer from '@/layouts/PageContainer.vue';
+  import HeaderTitle from '@/ui/HeaderTitle.vue';
 
   const { t } = useI18n();
 </script>
 <template>
   <header class="page-header min-h-[200px] md:min-h-[300px] pt-10">
     <PageContainer>
-      <h1 v-html="t('page.login.content.title')"></h1>
+      <HeaderTitle :content="t('page.login.content.title')" />
     </PageContainer>
   </header>
 </template>

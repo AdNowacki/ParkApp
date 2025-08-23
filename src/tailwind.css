@@ -3,6 +3,9 @@
 
 /* https://tailwindcss.com/docs/theme */
 @theme {
+  --font-main: 'Lato' system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-decor: 'Poppins' system-ui, -apple-system, 'Segoe UI', sans-serif;
+
   --color-primary-100: #ffffff;
   --color-primary-200: #f2f2f2;
   --color-primary-300: #d9d9d9;

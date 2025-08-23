@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { withDefaults, defineProps } from 'vue';
   import PageContainer from '@/layouts/PageContainer.vue';
   import { computed } from 'vue';
 
