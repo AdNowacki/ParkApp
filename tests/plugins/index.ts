@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n';
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../../src/components/pages/Home/Home.vue';
+import Home from '../../src/components/pages/Home.vue';
 
 export const i18n = createI18n({
   legacy: false,

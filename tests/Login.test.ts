@@ -1,7 +1,7 @@
 import { describe, it, beforeEach, expect, vi } from 'vitest';
 import { mount, VueWrapper } from '@vue/test-utils';
 import { createPinia } from 'pinia';
-import Login from '../src/components/pages/Login/Login.vue';
+import Login from '../src/components/pages/Login.vue';
 import { i18n, router } from './plugins';
 import { plugin, defaultConfig } from '@formkit/vue';
 
