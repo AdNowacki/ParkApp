@@ -2,7 +2,7 @@
   import PageHeader from '@/layouts/PageHeader.vue';
   import Content from '@/layouts/Content.vue';
   import Navigation from '@/layouts/Navigation.vue';
-  import Pagination from '@/ui/Pagination.vue';
+  import DotPagination from '~/components/ui/DotPagination.vue';
 </script>
 
 <template>
@@ -12,7 +12,7 @@
       <div class="grow-0 shrink-0 basis-[33%]">Pilot</div>
       <div>Lista</div>
     </div>
-    <Pagination :total="10" :current="1" />
+    <DotPagination :total="10" :current="1" />
   </Content>
   <Navigation />
 </template>
