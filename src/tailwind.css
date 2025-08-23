@@ -20,4 +20,13 @@
   --color-decor-600: #db8e2c;
   --color-decor-700: #b46f24;
   --color-decor-800: #8c541c;
+
+  --color-decor-dark-100: #cce4ff;
+  --color-decor-dark-200: #99c9ff;
+  --color-decor-dark-300: #66adff;
+  --color-decor-dark-400: #338fff;
+  --color-decor-dark-500: #006fff;
+  --color-decor-dark-600: #004fb2;
+  --color-decor-dark-700: #1f326f;
+  --color-decor-dark-800: #15215c;
 }
