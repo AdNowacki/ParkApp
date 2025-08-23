@@ -1,6 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import PageContainer from '@/layouts/PageContainer.vue';
+</script>
 <template>
-  <header class="page-header min-h-[200px]"></header>
+  <header class="page-header min-h-[200px]">
+    <PageContainer>Content</PageContainer>
+  </header>
 </template>
 
 <style scoped lang="scss">
