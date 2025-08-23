@@ -19,8 +19,8 @@
   });
 </script>
 <template>
-  <nav class="navigation">
-    <PageContainer :class="componentClasses" class="flex justify-between items-center gap-2 h-15">
+  <nav :class="componentClasses" class="w-full">
+    <PageContainer class="flex justify-between items-center gap-2 h-15">
       <a href="#" class="navigation__item">
         <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
