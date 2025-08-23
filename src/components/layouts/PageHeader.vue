@@ -2,7 +2,7 @@
   import PageContainer from '@/layouts/PageContainer.vue';
 </script>
 <template>
-  <header class="page-header min-h-[200px]">
+  <header class="page-header min-h-[200px] md:min-h-[300px]">
     <PageContainer>Content</PageContainer>
   </header>
 </template>
