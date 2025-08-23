@@ -3,8 +3,6 @@
 </script>
 <template>
   <PageContainer class="px-0">
-    <div>
-      <slot></slot>
-    </div>
+    <slot></slot>
   </PageContainer>
 </template>

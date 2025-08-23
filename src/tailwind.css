@@ -7,6 +7,10 @@
   --font-decor: 'Poppins' system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --shadow-100: -10px 4px 20px rgba(48, 48, 48, 0.1);
+  --shadow-200: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  --shadow-inset-100: inset 0 -1px 3px rgba(0, 0, 0, 0.25);
+
   --back-btn-size: 40px;
 
   --color-primary-100: #ffffff;
