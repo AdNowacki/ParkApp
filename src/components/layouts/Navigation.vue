@@ -143,13 +143,13 @@
 
       &:hover {
         path {
-          fill: var(--color-decor-dark-800);
+          fill: var(--color-decor-dark-400);
         }
       }
 
       &--active {
         path {
-          fill: var(--color-decor-dark-800);
+          fill: var(--color-decor-dark-400);
         }
       }
     }

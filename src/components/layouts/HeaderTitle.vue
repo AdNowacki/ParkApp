@@ -10,5 +10,5 @@
   );
 </script>
 <template>
-  <h1 v-html="props.content" class="font-decor font-bold text-[32px]/[40px]"></h1>
+  <h1 v-html="props.content" class="font-decor font-bold text-decor-dark-400 text-[32px]/[40px]"></h1>
 </template>

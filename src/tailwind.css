@@ -6,30 +6,20 @@
   --font-main: 'Lato' system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-decor: 'Poppins' system-ui, -apple-system, 'Segoe UI', sans-serif;
 
+  --shadow-100: -10px 4px 20px rgba(48, 48, 48, 0.1);
+
   --color-primary-100: #ffffff;
-  --color-primary-200: #f2f2f2;
-  --color-primary-300: #d9d9d9;
-  --color-primary-400: #bfbfbf;
-  --color-primary-500: #999999;
-  --color-primary-600: #666666;
-  --color-primary-700: #4d4d4d;
-  --color-primary-800: #333333;
+  --color-primary-200: #cccccc;
+  --color-primary-300: #777777;
+  --color-primary-400: #333333;
 
   --color-decor-100: #fadf99;
-  --color-decor-200: #fcd572;
-  --color-decor-300: #fdc94f;
-  --color-decor-400: #feb53a;
-  --color-decor-500: #ffb034;
-  --color-decor-600: #db8e2c;
-  --color-decor-700: #b46f24;
-  --color-decor-800: #8c541c;
+  --color-decor-200: #f8c86c;
+  --color-decor-300: #feb347;
+  --color-decor-400: #ffb034;
 
   --color-decor-dark-100: #cce4ff;
-  --color-decor-dark-200: #99c9ff;
-  --color-decor-dark-300: #66adff;
-  --color-decor-dark-400: #338fff;
-  --color-decor-dark-500: #006fff;
-  --color-decor-dark-600: #004fb2;
-  --color-decor-dark-700: #1f326f;
-  --color-decor-dark-800: #15215c;
+  --color-decor-dark-200: #7aa7e6;
+  --color-decor-dark-300: #3c5fa3;
+  --color-decor-dark-400: #15215c;
 }
