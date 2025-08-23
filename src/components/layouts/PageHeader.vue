@@ -1,19 +1,24 @@
 <script setup lang="ts">
   import { useI18n } from 'vue-i18n';
   import PageContainer from '@/layouts/PageContainer.vue';
-  import HeaderTitle from '~/components/layouts/HeaderTitle.vue';
+  import HeaderTitle from '@/layouts/HeaderTitle.vue';
+  import BackBtn from '@/ui/BackBtn.vue';
 
   const { t } = useI18n();
 </script>
 <template>
   <header
-    class="bg-linear-to-b from-decor-400 to-decor-100 min-h-[200px] md:min-h-[300px] flex items-stretch pt-10 shadow-(--shadow-100) rounded-b-2xl"
+    class="bg-linear-to-b from-decor-400 to-decor-100 min-h-[280px] flex items-stretch pt-15 shadow-(--shadow-100) rounded-b-2xl"
   >
-    <div class="bg-[url(/images/key-icon.svg)] bg-no-repeat bg-right w-full">
+    <div class="bg-[url(/images/key-icon.svg)] bg-bottom-right bg-no-repeat w-full">
       <PageContainer>
-        <div class="flex">
-          <button>Back button @TODO</button>
-          <HeaderTitle :content="t('page.login.content.title')" />
+        <div class="flex gap-5">
+          <div class="grow-0 shrink-0">
+            <BackBtn />
+          </div>
+          <div>
+            <HeaderTitle :content="t('page.login.content.title')" />
+          </div>
         </div>
       </PageContainer>
     </div>
