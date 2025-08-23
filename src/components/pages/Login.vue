@@ -53,7 +53,7 @@
         <template #submit>
           <button
             type="submit"
-            class="bg-decor-500 hover:bg-decor-600 text-white font-semibold py-2 px-4 rounded shadow w-full mt-3"
+            class="bg-decor-400 hover:bg-decor-200 text-white font-semibold py-2 px-4 rounded shadow w-full mt-3"
           >
             {{ t('form.send') }}
           </button>

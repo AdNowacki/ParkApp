@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { withDefaults, defineProps } from 'vue';
   import PageContainer from '@/layouts/PageContainer.vue';
   import { computed } from 'vue';
 
@@ -142,13 +143,13 @@
 
       &:hover {
         path {
-          fill: var(--color-decor-dark-800);
+          fill: var(--color-decor-dark-400);
         }
       }
 
       &--active {
         path {
-          fill: var(--color-decor-dark-800);
+          fill: var(--color-decor-dark-400);
         }
       }
     }
