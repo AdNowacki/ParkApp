@@ -2,7 +2,7 @@
 
 ## How to start
 
-- Install node (v22.14.0)
+- Install node (v22.18)
 - Install yarn
 - Get repository
 - Open the project directory
@@ -19,4 +19,6 @@
 - `format` - run prettier
 - `test:unit` - run test
 - `test:coverage` - run test coverage
+- `lint` - run eslint
+- `lint:fix` - run eslint and fix
 - `fetch-locales` - fetch translations from Loco and saves them to translation files
