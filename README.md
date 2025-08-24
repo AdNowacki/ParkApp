@@ -10,6 +10,7 @@
 - Contact the author to obtain the .env file. The .env file is required.
 - Fetch translations `yarn fetch-locales`
 - Start developer mode `yarn dev`
+- To log in and view the pilot screen, you need to use the credentials you sent me for the task. You’ll find them in the received .env variables.
 
 ## Scripts
 
