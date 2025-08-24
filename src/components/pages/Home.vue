@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { ref } from 'vue';
+  import { useI18n } from 'vue-i18n';
   import PageHeader from '@/layouts/PageHeader.vue';
   import Content from '@/layouts/Content.vue';
   import Navigation from '@/layouts/Navigation.vue';
@@ -7,17 +8,19 @@
   import Remote from '@/ui/Remote.vue';
   import Gates from '@/common/Gates.vue';
 
+  const { t } = useI18n();
+
   const currentPage = ref<number>(1);
 
   const remoteMockData = {
-    title: 'Długa nazwa pilota',
+    title: t('mock.title'),
     items: [
       { id: 1, label: 'Szlaban Grzybowska 1', remoteLabel: 'A' },
       { id: 2, label: 'Brama garażowa #1', remoteLabel: 'B' },
       { id: 3, label: 'Brama garażowa #2', remoteLabel: 'C' },
       { id: 4, label: 'Szlaban Powstańsów Śląskich 32', remoteLabel: 'D' },
     ],
-    hint: 'Wybierz bramę, by otworzyć',
+    hint: t('mock.hint'),
   };
 
   const activeGate = ref<number | undefined>(remoteMockData.items[0].id);
