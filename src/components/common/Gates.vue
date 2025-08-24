@@ -3,7 +3,7 @@
     defineProps<{
       title: string;
       hint: string;
-      items: { id: number; label: string }[];
+      items: { id: number; label: string; remoteLabel: string }[];
       modelValue?: number;
     }>(),
     {
@@ -22,7 +22,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col p-6 text-center text-(--color-decor-dark-400)">
+  <div class="flex flex-col text-center text-(--color-decor-dark-400)">
     <h2 class="font-decor2 text-[24px]/[40px] font-bold mb-8">{{ props.title }}</h2>
 
     <button
@@ -33,7 +33,7 @@
         i === props.items.length - 1 ? 'mb-0' : 'mb-4',
         isActive(gate.id)
           ? 'bg-(--color-decor-dark-400) text-white'
-          : 'border-(--color-decor-dark-400) text-(--color-decor-dark-400) hover:bg-(--color-decor-dark-400) hover:text-white',
+          : 'border-(--color-decor-dark-400) text-(--color-decor-dark-400) hover:bg-(--color-decor-dark-400) hover:text-white active:bg-(--color-decor-dark-400) active:text-white',
       ]"
       class="overflow-hidden whitespace-nowrap text-ellipsis cursor-pointer w-full max-w-xs px-3 py-2 rounded-xl border text-lg font-medium transition"
     >

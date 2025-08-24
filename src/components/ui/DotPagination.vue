@@ -31,7 +31,7 @@
         'w-6 h-6 rounded-full transition-all duration-300 cursor-pointer',
         modelValue === index + 1
           ? 'bg-decor-dark-400 shadow-(--shadow-200)'
-          : 'bg-white border border-gray-300 shadow-(--shadow-inset-100) hover:shadow-md hover:bg-decor-dark-400',
+          : 'bg-white border border-gray-300 shadow-(--shadow-inset-100) hover:shadow-md hover:bg-decor-dark-400 active:shadow-md active:bg-decor-dark-400',
       ]"
     ></button>
   </div>

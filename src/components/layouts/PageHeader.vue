@@ -8,7 +8,7 @@
 </script>
 <template>
   <header
-    class="bg-linear-to-b from-decor-400 to-decor-100 min-h-[280px] flex items-stretch pt-15 shadow-(--shadow-100) rounded-b-2xl"
+    class="bg-linear-to-b from-decor-300 to-decor-100 min-h-[280px] flex items-stretch pt-15 shadow-(--shadow-100) rounded-b-2xl"
   >
     <div class="bg-[url(/images/key-icon.svg)] bg-bottom-right bg-no-repeat w-full">
       <PageContainer>
