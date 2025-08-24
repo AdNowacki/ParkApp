@@ -5,7 +5,7 @@
   import Content from '@/layouts/Content.vue';
   import Navigation from '@/layouts/Navigation.vue';
   import DotPagination from '@/ui/DotPagination.vue';
-  import Remote from '@/ui/Remote.vue';
+  import RemoteControl from '@/ui/RemoteControl.vue';
   import Gates from '@/common/Gates.vue';
 
   const { t } = useI18n();
@@ -32,7 +32,7 @@
     <div class="pb-15">
       <div class="flex">
         <div class="grow-0 shrink-0 md:w-[50%] w-[33%] py-6">
-          <Remote :items="remoteMockData.items" />
+          <RemoteControl :items="remoteMockData.items" />
         </div>
         <div class="grow-0 shrink-0 md:w-[50%] w-[67%] p-6">
           <Gates
