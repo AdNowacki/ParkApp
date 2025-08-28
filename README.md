@@ -23,3 +23,19 @@
 - `lint` - run eslint
 - `lint:fix` - run eslint and fix
 - `fetch-locales` - fetch translations from Loco and saves them to translation files
+
+## Tools used:
+
+- Vue
+- Vue Router
+- vueI18n
+- Loco
+- Graphql
+- Tailwind
+- Vitest
+- Pinia
+- TypeScript
+- Formkit
+- Husky
+- ESLint
+- Prettier
